@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Fast Meal</string>
+    <string name="title_activity_tela_inicial">TelaInicial</string>
+    <string name="title_activity_tela_iniciall">TelaIniciall</string>
+    <string name="title_activity_pagina_inicial">PaginaInicial</string>
+    <string name="title_activity_mesas">mesas</string>
+    <string name="title_activity_mesa">mesa</string>
+    <string name="title_activity_cardapio">Cardapio</string>
+</resources>
