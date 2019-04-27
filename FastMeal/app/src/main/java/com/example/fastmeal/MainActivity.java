@@ -9,22 +9,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 import java.text.Format;
+import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
     Button btnScan;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         btnScan = (Button) findViewById(R.id.btnScan1);
+
 
         final Activity activity = this;
 
@@ -33,8 +39,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 IntentIntegrator integrator = new IntentIntegrator(activity);
 
-                integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
+                integrator.setDesiredBarcodeFormats (IntentIntegrator.QR_CODE_TYPES);
                 integrator.setCameraId(0);
+
                 integrator.initiateScan();
 
 
@@ -51,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
                    if(result.getContents().toString().equals("Leia")) {
                 Intent intent = new Intent (this, PaginaInicial.class);
                         startActivity(intent);
+
+
             } else {
                 alert("Leitura Cancelada");
 
@@ -60,8 +69,10 @@ public class MainActivity extends AppCompatActivity {
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);
+
         }
     }
+
 
     private void alert(String msg) {
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
@@ -70,9 +81,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
-
-
 }
+
+
+
+
+
+

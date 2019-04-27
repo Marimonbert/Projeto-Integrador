@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fastmeal">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/icone"
@@ -10,12 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Cardapio"
-            android:label="@string/title_activity_mesa"></activity>
+            android:name=".Garçom.Login"
+            android:label="@string/title_activity_login"></activity>
+        <activity
+            android:name=".cardapios"
+            android:label="@string/title_activity_cardapios" />
         <activity
             android:name=".PaginaInicial"
             android:label="@string/title_activity_pagina_inicial" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

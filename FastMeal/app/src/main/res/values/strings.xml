@@ -6,4 +6,6 @@
     <string name="title_activity_mesas">mesas</string>
     <string name="title_activity_mesa">mesa</string>
     <string name="title_activity_cardapio">Cardapio</string>
+    <string name="title_activity_cardapios">cardapios</string>
+    <string name="title_activity_login">Login</string>
 </resources>
